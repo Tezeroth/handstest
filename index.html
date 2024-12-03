@@ -4,27 +4,26 @@
     <title>Hands Test</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.4/dist/super-hands.min.js"></script>
 </head>
 <body>
 <a-scene>
     <!-- Right hand entity -->
-    <a-entity id="rightHand"
-    hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
-    super-hands="grabbable: true; draggable: true; droppable: true"
-    sphere-collider="objects: a-box">
+    <a-entity 
+        id="rightHand"
+        hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
+        super-hands
+        sphere-collider="objects: a-box">
     </a-entity>
 
     <!-- Grabbable box -->
     <a-box 
         grabbable
         position="-1.4 1.5 -3"
-        color="yellow"
-        ></a-box>
-    <!--animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 2000"-->
+        color="yellow">
+    </a-box>
 </a-scene>
 </body>
 </html>
