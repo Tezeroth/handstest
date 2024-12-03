@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hands Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <!-- Right hand entity -->
+    <a-entity
+        sphere-collider="objects: a-box"
+        super-hands="grabbable: true"
+        id="rightHand"
+        hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
+        ></a-entity>
+
+    <!-- Grabbable box -->
+    <a-box 
+        grabbable
+        position="-1.4 1.5 -3"
+        color="yellow"
+        ></a-box>
+    <!--animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 2000"-->
+</a-scene>
+</body>
+</html>
