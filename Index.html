@@ -12,12 +12,11 @@
 <body>
 <a-scene>
     <!-- Right hand entity -->
-    <a-entity
-        sphere-collider="objects: a-box"
-        super-hands="grabbable: true"
-        id="rightHand"
-        hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
-        ></a-entity>
+    <a-entity id="rightHand"
+    hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
+    super-hands="grabbable: true; draggable: true; droppable: true"
+    sphere-collider="objects: a-box">
+    </a-entity>
 
     <!-- Grabbable box -->
     <a-box 
